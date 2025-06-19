@@ -1,6 +1,8 @@
+$transition-duration: 0.3s;
+
 .SafariPage {
   &__with-will-change {
-    transition: opacity 0.3s;
+    transition: opacity $transition-duration;
     opacity: 0.2;
     will-change: opacity;
 
@@ -10,7 +12,7 @@
   }
 
   &__without-will-change {
-    transition: opacity 0.3s;
+    transition: opacity $transition-duration;
     opacity: 0.2;
 
     &:hover {
@@ -62,9 +64,10 @@
   );
   color: white;
   padding: 10px;
+  overflow: hidden;
 
   &__translated {
-    transition: transform 0.3s;
+    transition: transform $transition-duration;
     transform: translateX(105%);
     background: white;
     color: black;
