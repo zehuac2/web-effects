@@ -12,7 +12,7 @@ $grid-size: var(--grid-size);
       linear-gradient(to bottom, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
     background-size: $grid-size $grid-size;
     background-repeat: repeat;
-    /* Animate background position for infinite scroll effect */
+    // Animate background position for infinite scroll effect.
     animation: grid-move 2s linear infinite;
   }
 }
