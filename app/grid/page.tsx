@@ -1,4 +1,4 @@
-import "./page.scss";
+import './page.scss';
 
 /**
  * Demonstrate how to implement grid
@@ -16,6 +16,6 @@ function GridPage() {
   );
 }
 
-GridPage.displayName = "GridPage";
+GridPage.displayName = 'GridPage';
 
 export default GridPage;
