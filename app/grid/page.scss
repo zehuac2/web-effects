@@ -1,0 +1,31 @@
+$grid-size: var(--grid-size);
+
+.GridPage {
+  &__css {
+    --grid-size: 40px;
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    background-color: #181818;
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+    background-size: $grid-size $grid-size;
+    background-repeat: repeat;
+    /* Animate background position for infinite scroll effect */
+    animation: grid-move 2s linear infinite;
+  }
+}
+
+@keyframes grid-move {
+  0% {
+    background-position:
+      0 0,
+      0 0;
+  }
+  100% {
+    background-position:
+      $grid-size $grid-size,
+      $grid-size $grid-size;
+  }
+}
