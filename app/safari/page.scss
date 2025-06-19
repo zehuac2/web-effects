@@ -1,0 +1,20 @@
+.SafariPage {
+  &__with-will-change {
+    transition: opacity 0.3s;
+    opacity: 0.2;
+    will-change: opacity;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__without-will-change {
+    transition: opacity 0.3s;
+    opacity: 0.2;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
