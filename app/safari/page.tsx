@@ -1,6 +1,6 @@
-import clsx from "clsx";
+import clsx from 'clsx';
 
-import "./page.scss";
+import './page.scss';
 
 interface ContentProps {
   className?: string;
@@ -8,7 +8,7 @@ interface ContentProps {
 
 function Content({ className }: ContentProps) {
   return (
-    <div className={clsx("SafariPageContent", className)}>
+    <div className={clsx('SafariPageContent', className)}>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
       <button>Some button</button>
       <div className="SafariPageContent__translated">Translated</div>
@@ -17,7 +17,7 @@ function Content({ className }: ContentProps) {
   );
 }
 
-Content.displayName = "Content";
+Content.displayName = 'Content';
 
 /**
  * Demonstrate common problems with Safari and how to fix them.
@@ -42,6 +42,6 @@ function SafariPage() {
   );
 }
 
-SafariPage.displayName = "SafariPage";
+SafariPage.displayName = 'SafariPage';
 
 export default SafariPage;
