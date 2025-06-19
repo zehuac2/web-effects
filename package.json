@@ -2,7 +2,8 @@
   "name": "web-effects",
   "version": "1.0.0",
   "scripts": {
-    "dev": "next dev"
+    "dev": "next dev",
+    "format": "prettier --write --cache ."
   },
   "dependencies": {
     "next": "15.2.1",
@@ -13,6 +14,7 @@
     "@types/node": "22.13.9",
     "@types/react": "19.0.10",
     "@types/react-dom": "19.0.4",
+    "prettier": "^3.5.3",
     "sass": "^1.89.2",
     "typescript": "5.8.2"
   }
