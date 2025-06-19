@@ -1,14 +1,16 @@
-import './page.scss';
+import "./page.scss";
 
 function Content() {
   return (
-    <div>
+    <div className="SafariPageContent">
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+      <button>Some button</button>
+      <div className="SafariPageContent__translated">Translated</div>
     </div>
   );
 }
 
-Content.displayName = 'Content';
+Content.displayName = "Content";
 
 /**
  * Demonstrate common problems with Safari and how to fix them.
@@ -31,6 +33,6 @@ function SafariPage() {
   );
 }
 
-SafariPage.displayName = 'SafariPage';
+SafariPage.displayName = "SafariPage";
 
 export default SafariPage;

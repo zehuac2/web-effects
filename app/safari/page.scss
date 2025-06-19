@@ -17,4 +17,57 @@
       opacity: 1;
     }
   }
+
+  &__with-will-change,
+  &__without-will-change {
+    &:hover {
+      .SafariPageContent {
+        &__translated {
+          transform: translateX(0);
+        }
+      }
+    }
+  }
+}
+
+.SafariPageContent {
+  // https://grabient.com/HQBgrAzANKAsAcMT0cAjLAnDNYDsOsATDEUSKWicGWlBMHmtA3kS8AGybShgVpQIAUIoggA/
+  background: linear-gradient(
+    90deg,
+    rgba(18, 18, 22, 1) 0%,
+    rgba(18, 18, 22, 1) 7.692%,
+    rgba(22, 23, 26, 1) 7.692%,
+    rgba(22, 23, 26, 1) 15.385%,
+    rgba(26, 27, 31, 1) 15.385%,
+    rgba(26, 27, 31, 1) 23.077%,
+    rgba(31, 32, 35, 1) 23.077%,
+    rgba(31, 32, 35, 1) 30.769%,
+    rgba(35, 36, 39, 1) 30.769%,
+    rgba(35, 36, 39, 1) 38.462%,
+    rgba(39, 40, 43, 1) 38.462%,
+    rgba(39, 40, 43, 1) 46.154%,
+    rgba(43, 44, 47, 1) 46.154%,
+    rgba(43, 44, 47, 1) 53.846%,
+    rgba(47, 48, 51, 1) 53.846%,
+    rgba(47, 48, 51, 1) 61.538%,
+    rgba(50, 51, 55, 1) 61.538%,
+    rgba(50, 51, 55, 1) 69.231%,
+    rgba(54, 55, 58, 1) 69.231%,
+    rgba(54, 55, 58, 1) 76.923%,
+    rgba(56, 57, 61, 1) 76.923%,
+    rgba(56, 57, 61, 1) 84.615%,
+    rgba(59, 60, 64, 1) 84.615%,
+    rgba(59, 60, 64, 1) 92.308%,
+    rgba(61, 62, 66, 1) 92.308% 100%
+  );
+  color: white;
+  padding: 10px;
+
+  &__translated {
+    transition: transform 0.3s;
+    transform: translateX(105%);
+    background: white;
+    color: black;
+    padding: 10px 5px;
+  }
 }
