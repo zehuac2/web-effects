@@ -1,16 +1,17 @@
 import GridWithCSS from './GridWithCSS';
+import GridWithShader from './GridWithShader';
 
 import './page.scss';
 
 /**
  * Demonstrate how to implement grid
- * - TODO: Graphics context.
  */
 function GridPage() {
   return (
     <section>
       <h1>Grid</h1>
       <GridWithCSS />
+      <GridWithShader />
     </section>
   );
 }
