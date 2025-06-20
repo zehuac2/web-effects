@@ -1,3 +1,5 @@
+import GridWithCSS from './GridWithCSS';
+
 import './page.scss';
 
 /**
@@ -8,10 +10,7 @@ function GridPage() {
   return (
     <section>
       <h1>Grid</h1>
-      <section>
-        <h2>Using CSS</h2>
-        <div className="GridPage__css" />
-      </section>
+      <GridWithCSS />
     </section>
   );
 }
