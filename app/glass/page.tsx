@@ -7,6 +7,7 @@
  * - (Optional) Frosted glass background
  * - Typically 1px border
  * - Dark theme: slightly lighter color on the border than the background
+ * - Light theme: darker color on the border than the background
  *
  * ## Apple's Liquid Glass
  * - Some kind of frosted glass effect as the background
