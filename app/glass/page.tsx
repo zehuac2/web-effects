@@ -1,21 +1,18 @@
 /**
  * TODO:
  * @summary Demonstrate glass effects.
- *
- * # Observations
- * ## Regular Glass
- * - (Optional) Frosted glass background
- * - Typically 1px border
- * - Dark theme: slightly lighter color on the border than the background
- * - Light theme: darker color on the border than the background
- *
- * ## Apple's Liquid Glass
- * - Some kind of frosted glass effect as the background
- * - A border that has frosted glass effect.
- *   - Top left and bottom right corners are extra light.
  */
+import RegularGlass from './RegularGlass';
+import LiquidGlass from './LiquidGlass';
+
 function GlassPage() {
-  return null;
+  return (
+    <section>
+      <h1>Glass</h1>
+      <RegularGlass />
+      <LiquidGlass />
+    </section>
+  );
 }
 
 GlassPage.displayName = 'GlassPage';
