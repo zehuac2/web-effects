@@ -1,3 +1,5 @@
+import Theme from './Theme';
+
 /**
  * Regular Glass
  * - (Optional) Frosted glass background
@@ -9,7 +11,14 @@ function RegularGlass() {
   return (
     <section>
       <h2>Regular Glass</h2>
-      <div />
+      <Theme theme="light">
+        <h3>Light Theme</h3>
+        <div />
+      </Theme>
+      <Theme theme="dark">
+        <h3>Dark Theme</h3>
+        <div />
+      </Theme>
     </section>
   );
 }
