@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
 const LINKS = [
+  { href: '/all-gray-but-one', label: 'All Gray But One' },
   { href: '/grid', label: 'Grid' },
   { href: '/glass', label: 'Glass' },
   { href: '/scroll-animations', label: 'Scroll Animations' },
