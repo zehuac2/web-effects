@@ -26,6 +26,6 @@ function WindowsEffectPage() {
   );
 }
 
-WindowsEffectPage.displayName = "WindowsEffectPage";
+WindowsEffectPage.displayName = 'WindowsEffectPage';
 
 export default WindowsEffectPage;
