@@ -1,14 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
+const BASE_URL = import.meta.env.BASE_URL.replace(/\/$/, ''); // '/web-effects'
+
 const LINKS = [
-  { href: '/all-gray-but-one', label: 'All Gray But One' },
-  { href: '/glass', label: 'Glass' },
-  { href: '/grid', label: 'Grid' },
-  { href: '/safari', label: 'Safari' },
-  { href: '/scroll-animations', label: 'Scroll Animations' },
-  { href: '/split-flip-timer', label: 'Split Flip Timer' },
-  { href: '/windows-effect', label: 'Windows Effect' },
+  { href: `${BASE_URL}/all-gray-but-one`, label: 'All Gray But One' },
+  { href: `${BASE_URL}/glass`, label: 'Glass' },
+  { href: `${BASE_URL}/grid`, label: 'Grid' },
+  { href: `${BASE_URL}/safari`, label: 'Safari' },
+  { href: `${BASE_URL}/scroll-animations`, label: 'Scroll Animations' },
+  { href: `${BASE_URL}/split-flip-timer`, label: 'Split Flip Timer' },
+  { href: `${BASE_URL}/windows-effect`, label: 'Windows Effect' },
 ];
 ---
 
