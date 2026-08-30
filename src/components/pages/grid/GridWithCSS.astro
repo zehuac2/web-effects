@@ -2,13 +2,12 @@
 /**
  * Grid implementation using CSS background patterns
  */
-import { clsx } from 'clsx';
 ---
 
 <section>
   <h2>Using CSS</h2>
   <div
-    class={clsx(
+    class:list={[
       'relative',
       'h-[60vh]',
       'w-full',
@@ -17,7 +16,7 @@ import { clsx } from 'clsx';
       'bg-[length:40px_40px]',
       'bg-repeat',
       'animate-grid-move',
-    )}
+    ]}
   >
   </div>
 </section>
