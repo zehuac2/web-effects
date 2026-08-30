@@ -1,4 +1,6 @@
 ---
+import { clsx } from 'clsx';
+
 export interface Props {
   class?: string;
 }
@@ -6,9 +8,22 @@ export interface Props {
 const { class: className } = Astro.props;
 ---
 
-<div class:list={['SafariPageContent', className]}>
+<div class={clsx('group', 'overflow-hidden', 'bg-safari-page', 'p-2.5', 'text-white', className)}>
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
   <button>Some button</button>
-  <div class="SafariPageContent__translated">Translated</div>
+  <div
+    class={clsx(
+      'translate-x-[105%]',
+      'group-hover:translate-x-0',
+      'bg-white',
+      'px-[5px]',
+      'py-2.5',
+      'text-black',
+      'transition-transform',
+      'duration-300',
+    )}
+  >
+    Translated
+  </div>
   <svg></svg>
 </div>

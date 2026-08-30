@@ -3,10 +3,8 @@
  * Demonstrate common problems with Safari and how to fix them.
  * - TODO: after opacity animation without will-change, Safari drops content.
  */
-import Layout from '../../layouts/Layout.astro';
-import Content from '../../components/safari/Content.astro';
-
-import './page.scss';
+import Layout from '@/layouts/Layout.astro';
+import Content from '@/components/safari/Content.astro';
 ---
 
 <Layout>
@@ -16,12 +14,14 @@ import './page.scss';
     <section>
       <h2>Without will-change</h2>
       <p>After the opacity animation, Safari should (but currently does not) drop content.</p>
-      <Content class="SafariPage__without-will-change" />
+      <Content class="opacity-20 transition-opacity duration-300 hover:opacity-100" />
     </section>
     <section>
       <h2>With will-change</h2>
       <p>This should work as expected.</p>
-      <Content class="SafariPage__with-will-change" />
+      <Content
+        class="opacity-20 transition-opacity duration-300 will-change-[opacity] hover:opacity-100"
+      />
     </section>
   </section>
 </Layout>
