@@ -2,6 +2,8 @@
 
 @theme {
   --animate-grid-move: grid-move 2s linear infinite;
+  --spacing-content-width: 1200px;
+  --breakpoint-content-gutter: 1250px;
 
   @keyframes grid-move {
     0% {
