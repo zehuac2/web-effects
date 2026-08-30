@@ -1,0 +1,30 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const BASE_URL = import.meta.env.BASE_URL.replace(/\/$/, ''); // '/web-effects'
+
+const LINKS = [
+  { href: `${BASE_URL}/all-gray-but-one`, label: 'All Gray But One' },
+  { href: `${BASE_URL}/glass`, label: 'Glass' },
+  { href: `${BASE_URL}/grid`, label: 'Grid' },
+  { href: `${BASE_URL}/safari`, label: 'Safari' },
+  { href: `${BASE_URL}/scroll-animations`, label: 'Scroll Animations' },
+  { href: `${BASE_URL}/split-flip-timer`, label: 'Split Flip Timer' },
+  { href: `${BASE_URL}/windows-effect`, label: 'Windows Effect' },
+];
+---
+
+<Layout>
+  <section>
+    <h1>Hello, Astro!</h1>
+    <ul>
+      {
+        LINKS.map(({ href, label }) => (
+          <li>
+            <a href={href}>{label}</a>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</Layout>
