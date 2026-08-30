@@ -1,6 +1,6 @@
 import { cva } from 'cva';
 
-const section = cva({
+const contentColumn = cva({
   base: [
     'w-full',
     'mx-auto',
@@ -12,4 +12,4 @@ const section = cva({
   ],
 });
 
-export default section;
+export default contentColumn;

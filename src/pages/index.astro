@@ -1,6 +1,6 @@
 ---
 import Layout from '@/layouts/Layout.astro';
-import section from '@/components/styles/section';
+import contentColumn from '@/components/styles/contentColumn';
 
 const BASE_URL = import.meta.env.BASE_URL.replace(/\/$/, ''); // '/web-effects'
 
@@ -15,16 +15,21 @@ const LINKS = [
 ];
 ---
 
-<Layout>
-  <section class:list={section()}>
-    <ul>
-      {
-        LINKS.map(({ href, label }) => (
-          <li class:list={['underline', 'decoration-transparent', 'hover:decoration-gray-800']}>
-            <a href={href}>{label}</a>
-          </li>
-        ))
-      }
-    </ul>
-  </section>
+<Layout class:list={['flex', 'flex-col', 'min-h-dvh']}>
+  <nav class:list={['border-b', 'border-gray-700', contentColumn()]}>Web Effects</nav>
+  <main class:list={['flex-1', 'flex', 'flex-col']}>
+    <section class:list={contentColumn()}>
+      <ul>
+        {
+          LINKS.map(({ href, label }) => (
+            <li class:list={['underline', 'decoration-transparent', 'hover:decoration-gray-800']}>
+              <a href={href}>{label}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+    <div class:list={['flex-1', contentColumn()]}></div>
+  </main>
+  <footer class:list={['border-t', 'border-gray-700', contentColumn()]}>Github</footer>
 </Layout>
