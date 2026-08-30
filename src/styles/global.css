@@ -1,0 +1,39 @@
+@import 'tailwindcss';
+
+@theme {
+  --animate-grid-move: grid-move 2s linear infinite;
+
+  @keyframes grid-move {
+    0% {
+      background-position:
+        0 0,
+        0 0;
+    }
+    100% {
+      background-position:
+        40px 40px,
+        40px 40px;
+    }
+  }
+}
+
+/* 13-stop stepped gray gradient, equivalent to the original via
+   double-position color stops */
+@utility bg-safari-page {
+  background: linear-gradient(
+    90deg,
+    #121216 0 7.692%,
+    #16171a 7.692% 15.385%,
+    #1a1b1f 15.385% 23.077%,
+    #1f2023 23.077% 30.769%,
+    #232427 30.769% 38.462%,
+    #27282b 38.462% 46.154%,
+    #2b2c2f 46.154% 53.846%,
+    #2f3033 53.846% 61.538%,
+    #323337 61.538% 69.231%,
+    #36373a 69.231% 76.923%,
+    #38393d 76.923% 84.615%,
+    #3b3c40 84.615% 92.308%,
+    #3d3e42 92.308% 100%
+  );
+}

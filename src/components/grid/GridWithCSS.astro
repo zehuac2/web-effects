@@ -2,10 +2,22 @@
 /**
  * Grid implementation using CSS background patterns
  */
-import './GridWithCSS.scss';
+import { clsx } from 'clsx';
 ---
 
 <section>
   <h2>Using CSS</h2>
-  <div class="GridWithCSS"></div>
+  <div
+    class={clsx(
+      'relative',
+      'h-[60vh]',
+      'w-full',
+      'bg-[#181818]',
+      'bg-[linear-gradient(to_right,rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.08)_1px,transparent_1px)]',
+      'bg-[length:40px_40px]',
+      'bg-repeat',
+      'animate-grid-move',
+    )}
+  >
+  </div>
 </section>
