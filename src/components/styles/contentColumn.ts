@@ -1,6 +1,6 @@
-import { cva } from 'cva';
+import { tv } from 'tailwind-variants';
 
-const contentColumn = cva({
+const contentColumn = tv({
   base: [
     'w-full',
     'mx-auto',
