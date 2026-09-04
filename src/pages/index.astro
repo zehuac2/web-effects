@@ -175,14 +175,15 @@ const LINKS = [
                     color,
                     'p-5',
                     'transition-[transform,box-shadow]',
-                    'duration-300',
+                    'duration-500',
                     'ease-out',
-                    'hover:-translate-y-1',
+                    'motion-safe:hover:-translate-y-1',
                     'hover:shadow-[0_16px_35px_rgba(27,27,26,0.12)]',
-                    'focus-visible:-translate-y-1',
+                    'motion-safe:focus-visible:-translate-y-1',
                     'focus-visible:outline-2',
                     'focus-visible:outline-offset-4',
                     'focus-visible:outline-black',
+                    'motion-reduce:transition-none',
                   ]}
                 >
                   <span
@@ -197,9 +198,10 @@ const LINKS = [
                       'border-black/10',
                       'bg-white/25',
                       'transition-transform',
-                      'duration-500',
-                      'group-hover:scale-125',
-                      'group-hover:-translate-x-5',
+                      'duration-700',
+                      'motion-safe:group-hover:scale-125',
+                      'motion-safe:group-hover:-translate-x-5',
+                      'motion-reduce:transition-none',
                     ]}
                   />
                   <div class:list={['relative', 'flex', 'items-start', 'justify-between']}>
@@ -219,8 +221,9 @@ const LINKS = [
                         'text-lg',
                         'leading-none',
                         'transition-transform',
-                        'duration-300',
-                        'group-hover:rotate-45',
+                        'duration-500',
+                        'motion-safe:group-hover:rotate-45',
+                        'motion-reduce:transition-none',
                       ]}
                     >
                       ↗
