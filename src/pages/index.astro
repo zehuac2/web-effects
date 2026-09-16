@@ -1,30 +1,268 @@
 ---
 import Layout from '@/layouts/Layout.astro';
+import contentColumn from '@/components/styles/contentColumn';
 
 const BASE_URL = import.meta.env.BASE_URL.replace(/\/$/, ''); // '/web-effects'
 
 const LINKS = [
-  { href: `${BASE_URL}/all-gray-but-one`, label: 'All Gray But One' },
-  { href: `${BASE_URL}/glass`, label: 'Glass' },
-  { href: `${BASE_URL}/grid`, label: 'Grid' },
-  { href: `${BASE_URL}/safari`, label: 'Safari' },
-  { href: `${BASE_URL}/scroll-animations`, label: 'Scroll Animations' },
-  { href: `${BASE_URL}/split-flip-timer`, label: 'Split Flip Timer' },
-  { href: `${BASE_URL}/windows-effect`, label: 'Windows Effect' },
+  {
+    href: `${BASE_URL}/all-gray-but-one`,
+    label: 'All Gray But One',
+    description: 'A study in selective color and visual hierarchy.',
+    color: 'from-lime-200 via-lime-100 to-stone-50',
+  },
+  {
+    href: `${BASE_URL}/glass`,
+    label: 'Glass',
+    description: 'Testing blur, refraction, and translucent layers.',
+    color: 'from-sky-200 via-cyan-100 to-white',
+  },
+  {
+    href: `${BASE_URL}/grid`,
+    label: 'Grid',
+    description: 'Two approaches to a surface that never stands still.',
+    color: 'from-violet-200 via-fuchsia-100 to-white',
+  },
+  {
+    href: `${BASE_URL}/safari`,
+    label: 'Safari',
+    description: 'Small browser quirks, documented in the open.',
+    color: 'from-orange-200 via-amber-100 to-white',
+  },
+  {
+    href: `${BASE_URL}/scroll-animations`,
+    label: 'Scroll Animations',
+    description: 'Motion that responds to a reader moving through space.',
+    color: 'from-rose-200 via-pink-100 to-white',
+  },
+  {
+    href: `${BASE_URL}/split-flip-timer`,
+    label: 'Split Flip Timer',
+    description: 'A mechanical display brought back to the browser.',
+    color: 'from-indigo-200 via-blue-100 to-white',
+  },
+  {
+    href: `${BASE_URL}/windows-effect`,
+    label: 'Windows Effect',
+    description: 'Layered panes and playful spatial depth.',
+    color: 'from-emerald-200 via-teal-100 to-white',
+  },
 ];
 ---
 
-<Layout>
-  <section>
-    <h1>Hello, Astro!</h1>
-    <ul>
-      {
-        LINKS.map(({ href, label }) => (
-          <li>
-            <a href={href}>{label}</a>
-          </li>
-        ))
-      }
-    </ul>
-  </section>
+<Layout class:list={['min-h-dvh', 'overflow-x-hidden', 'bg-[#f5f5f0]', 'text-[#1b1b1a]']}>
+  <div
+    aria-hidden="true"
+    class:list={[
+      'pointer-events-none',
+      'fixed',
+      'inset-0',
+      'z-0',
+      'opacity-50',
+      'bg-[linear-gradient(to_right,rgba(27,27,26,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(27,27,26,0.05)_1px,transparent_1px)]',
+      'bg-size-[64px_64px]',
+      'mask-[linear-gradient(to_bottom,black,transparent_75%)]',
+    ]}
+  >
+  </div>
+  <div class:list={['relative', 'z-10', 'flex', 'min-h-dvh', 'flex-col']}>
+    <nav
+      class:list={[
+        'border-b',
+        'border-black/10',
+        'py-5',
+        'text-xs',
+        'font-medium',
+        'tracking-[0.18em]',
+        'uppercase',
+        contentColumn(),
+      ]}
+    >
+      <div class:list={['flex', 'items-center', 'justify-between']}>
+        <a href={BASE_URL || '/'} class:list={['transition-opacity', 'hover:opacity-55']}
+          >Web Effects</a
+        >
+        <span class:list={['text-black/45']}>A living notebook</span>
+      </div>
+    </nav>
+
+    <main class:list={['flex-1', contentColumn()]}>
+      <section class:list={['pt-18', 'pb-12', 'sm:pt-28', 'sm:pb-20']}>
+        <p
+          class:list={[
+            'mb-5',
+            'text-xs',
+            'font-medium',
+            'tracking-[0.18em]',
+            'text-black/50',
+            'uppercase',
+          ]}
+        >
+          Selected browser experiments · 2026
+        </p>
+        <h1
+          class:list={[
+            'max-w-4xl',
+            'text-5xl',
+            'leading-[0.93]',
+            'font-medium',
+            'tracking-[-0.065em]',
+            'sm:text-7xl',
+            'lg:text-8xl',
+          ]}
+        >
+          Little moments of<br class:list={['hidden', 'sm:block']} /> visual delight.
+        </h1>
+        <div
+          class:list={[
+            'mt-10',
+            'grid',
+            'gap-6',
+            'border-t',
+            'border-black/10',
+            'pt-5',
+            'sm:grid-cols-2',
+          ]}
+        >
+          <p class:list={['max-w-md', 'text-base', 'leading-relaxed', 'text-black/60']}>
+            A collection of studies in motion, depth, color, and the wonderfully weird corners of
+            the web platform.
+          </p>
+          <p
+            class:list={[
+              'self-end',
+              'text-xs',
+              'font-medium',
+              'tracking-[0.14em]',
+              'text-black/45',
+              'uppercase',
+              'sm:text-right',
+            ]}
+          >
+            07 experiments / Scroll to explore
+          </p>
+        </div>
+      </section>
+
+      <section aria-labelledby="experiments-heading" class:list={['pb-20', 'sm:pb-28']}>
+        <div class:list={['mb-5', 'flex', 'items-baseline', 'justify-between']}>
+          <h2
+            id="experiments-heading"
+            class:list={['text-sm', 'font-medium', 'tracking-[-0.02em]']}
+          >
+            Experiments
+          </h2>
+          <span class:list={['text-xs', 'text-black/45']}>Hover for a closer look</span>
+        </div>
+        <ul class:list={['grid', 'gap-3', 'sm:grid-cols-2', 'lg:grid-cols-3']}>
+          {
+            LINKS.map(({ href, label, description, color }, index) => (
+              <li>
+                <a
+                  href={href}
+                  class:list={[
+                    'group',
+                    'relative',
+                    'flex',
+                    'aspect-4/3',
+                    'flex-col',
+                    'justify-between',
+                    'overflow-hidden',
+                    'rounded-2xl',
+                    'border',
+                    'border-black/8',
+                    'bg-linear-to-br',
+                    color,
+                    'p-5',
+                    'transition-[transform,box-shadow]',
+                    'duration-500',
+                    'ease-out',
+                    'motion-safe:hover:-translate-y-1',
+                    'hover:shadow-[0_16px_35px_rgba(27,27,26,0.12)]',
+                    'motion-safe:focus-visible:-translate-y-1',
+                    'focus-visible:outline-2',
+                    'focus-visible:outline-offset-4',
+                    'focus-visible:outline-black',
+                    'motion-reduce:transition-none',
+                  ]}
+                >
+                  <span
+                    aria-hidden="true"
+                    class:list={[
+                      'absolute',
+                      '-right-10',
+                      '-bottom-14',
+                      'size-40',
+                      'rounded-full',
+                      'border',
+                      'border-black/10',
+                      'bg-white/25',
+                      'transition-transform',
+                      'duration-700',
+                      'motion-safe:group-hover:scale-125',
+                      'motion-safe:group-hover:-translate-x-5',
+                      'motion-reduce:transition-none',
+                    ]}
+                  />
+                  <div class:list={['relative', 'flex', 'items-start', 'justify-between']}>
+                    <span class:list={['font-mono', 'text-xs', 'text-black/50']}>
+                      {String(index + 1).padStart(2, '0')}
+                    </span>
+                    <span
+                      aria-hidden="true"
+                      class:list={[
+                        'flex',
+                        'size-8',
+                        'items-center',
+                        'justify-center',
+                        'rounded-full',
+                        'border',
+                        'border-black/15',
+                        'text-lg',
+                        'leading-none',
+                        'transition-transform',
+                        'duration-500',
+                        'motion-safe:group-hover:rotate-45',
+                        'motion-reduce:transition-none',
+                      ]}
+                    >
+                      ↗
+                    </span>
+                  </div>
+                  <div class:list={['relative']}>
+                    <h3 class:list={['text-2xl', 'font-medium', 'tracking-[-0.045em]']}>{label}</h3>
+                    <p
+                      class:list={['mt-2', 'max-w-55', 'text-sm', 'leading-snug', 'text-black/55']}
+                    >
+                      {description}
+                    </p>
+                  </div>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+    </main>
+
+    <footer class:list={['border-t', 'border-black/10', 'py-5', contentColumn()]}>
+      <div class:list={['flex', 'items-center', 'justify-between', 'text-xs', 'text-black/50']}>
+        <span>Built for curious browsers.</span>
+        <a
+          href="https://github.com/zehuac2/web-effects"
+          class:list={[
+            'font-medium',
+            'text-black',
+            'underline',
+            'decoration-black/25',
+            'underline-offset-4',
+            'transition-colors',
+            'hover:decoration-black',
+          ]}
+        >
+          GitHub
+        </a>
+      </div>
+    </footer>
+  </div>
 </Layout>

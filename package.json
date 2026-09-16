@@ -10,7 +10,9 @@
   },
   "dependencies": {
     "astro": "7.2.9",
-    "clsx": "2.1.1"
+    "clsx": "2.1.1",
+    "tailwind-variants": "3.3.1",
+    "tailwind-merge": "3.6.0"
   },
   "devDependencies": {
     "@astrojs/check": "0.9.10",
