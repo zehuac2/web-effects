@@ -11,12 +11,19 @@ import Theme from './Theme.astro';
 
 <section>
   <h2>Regular Glass</h2>
-  <Theme theme="light">
-    <h3>Light Theme</h3>
-    <div></div>
-  </Theme>
-  <Theme theme="dark">
-    <h3>Dark Theme</h3>
-    <div></div>
-  </Theme>
+  <div class:list={['rounded-xl', 'bg-[#1c1c1e]', 'p-4']}>
+    <button
+      class:list={[
+        'cursor-pointer',
+        'bg-[#0a84ff]',
+        'text-white',
+        'py-2',
+        'px-4',
+        'rounded-full',
+        'shadow-[inset_0_1px_0_0_rgba(255,255,255,0.6)]',
+      ]}
+    >
+      Glassy Button
+    </button>
+  </div>
 </section>
